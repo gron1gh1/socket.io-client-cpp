@@ -17,8 +17,8 @@ io.on('connection',(socket) =>{
 });
 
 app.post('/message',(req,res)=>{
-    console.log({msg:req.body.msg});
-    io.emit('msg',{msg:req.body.msg});
+    console.log(req.body);
+    io.emit('data',req.body);
     res.json({succ:1});
 }
 );

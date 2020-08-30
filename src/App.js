@@ -1,17 +1,12 @@
 import React,{useEffect} from 'react';
 import './App.css';
-import io from 'socket.io-client';
-function App() {
-  useEffect(()=>{
+import MessageToast from './MessageToast';
 
-    const socket = io('http://localhost:3001');
-    socket.on('msg',(data) =>{
-      console.log(data);
-    })
-  },[])
+
+function App() {
   return (
    <div>
-     a
+     <MessageToast />
    </div>
   );
 }
