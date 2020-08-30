@@ -33,11 +33,7 @@ export default function MessageToast() {
     }, [Data])
     return (
         <div style={{display:'flex',justifyContent:'center',alignItems:'center',height:'100vh',flexDirection:'column'}}>
-
-            {Data.map((v,i) => {
-                console.log((i === Data.length - 1));
-          return <ToastComponnet key={`data-${i}`} title={v.title} content={v.content} time={v.time} animation={(i === Data.length - 1) ? true : false}/>
- } )}
+            {Data.map((v,i) =><ToastComponnet key={`data-${i}`} title={v.title} content={v.content} time={v.time} animation={(i === Data.length - 1) ? true : false}/>)}
         </div>
     )
 }
