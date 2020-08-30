@@ -26,6 +26,7 @@ export default function MessageToast() {
     const [Data, SetData] = useState([]);
 
     useEffect(() => {
+        socket.removeAllListeners();
         socket.on('data', (recv_data) => {
             SetData(Data.concat(recv_data)); 
         });
